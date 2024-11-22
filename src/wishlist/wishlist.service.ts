@@ -18,4 +18,8 @@ export class WishlistService {
     await this.entityManager.flush();
     return wishlist;
   }
+
+  async findByName(name: string) {
+    return this.wishlistRepository.findOne({ recipient: name });
+  }
 }

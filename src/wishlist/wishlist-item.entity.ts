@@ -1,6 +1,9 @@
 import { Embeddable, Property } from '@mikro-orm/core';
 import { IsNotEmpty, IsString, IsUrl } from 'class-validator';
 
+/**
+ * An item in a wishlist.
+ */
 @Embeddable()
 export class WishlistItem {
   /**

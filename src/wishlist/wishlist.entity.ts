@@ -4,6 +4,9 @@ import { WishlistItem } from './wishlist-item.entity';
 import { Type } from 'class-transformer';
 import { ApiProperty } from '@nestjs/swagger';
 
+/**
+ * A wishlist entity.
+ */
 @Entity()
 export class Wishlist {
   /**
@@ -26,7 +29,7 @@ export class Wishlist {
   recipient: string;
 
   /**
-   * The items in the wishlist.  Each item is a string.
+   * The items in the wishlist.
    */
   @ApiProperty({
     example: [
