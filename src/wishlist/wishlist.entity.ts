@@ -18,7 +18,7 @@ export class Wishlist {
   id: number;
 
   /**
-   * The anme of the recipient of the wishlist.  Currently there's no authentication, and the
+   * The name of the recipient of the wishlist.  Currently there's no authentication, and the
    * wishlist is built on trust and honesty of S1 employees.
    *
    * @example Juswa

@@ -12,7 +12,9 @@ async function bootstrap() {
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('api', app, document, {
+    jsonDocumentUrl: '/api.json',
+  });
 
   app.useGlobalPipes(
     new ValidationPipe({
@@ -24,6 +26,7 @@ async function bootstrap() {
     }),
   );
 
+  app.enableCors();
   await app.listen(3000);
 }
 bootstrap();
