@@ -20,6 +20,8 @@ export class WishlistService {
   }
 
   async findByName(name: string) {
-    return this.wishlistRepository.findOne({ recipient: name });
+    return this.wishlistRepository.findOne({
+      recipient: { $ilike: `${name}` },
+    });
   }
 }
